@@ -1,11 +1,11 @@
 import React from "react";
 import { usePlane } from "@react-three/cannon";
 import { treeTexture } from "../textures";
-import { NearestFilter, RepeatWrapping } from "three";
+import { NearestFilter, PlaneGeometry, RepeatWrapping } from "three";
 
 export const Tree = () => {
   const [ref] = usePlane(() => ({
-    rotation: [-Math.PI / 3, 0, 0],
+    rotation: [-Math.PI / 2, 0, 0],
     position: [0, 0, 0],
   }));
   treeTexture.magFilter = NearestFilter;

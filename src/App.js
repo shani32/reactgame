@@ -4,6 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import { Sky } from "@react-three/drei";
 import { Physics } from "@react-three/cannon";
 import { Tree } from "./components/Tree";
+import { Player } from "./components/Player";
 
 function App() {
   useEffect(() => {});
@@ -14,6 +15,7 @@ function App() {
         <Sky sunPosition={[100, 100, 20]} />
         <ambientLight intensity={0.5} />
         <Physics>
+          <Player />
           <Tree />
         </Physics>
       </Canvas>
