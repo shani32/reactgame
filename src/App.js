@@ -6,6 +6,7 @@ import { Physics } from "@react-three/cannon";
 import { Tree } from "./components/Tree";
 import { Player } from "./components/Player";
 import { PersonView } from "./components/PersonView";
+import { Cubes } from "./components/Cubes";
 
 function App() {
   useEffect(() => {});
@@ -18,6 +19,7 @@ function App() {
         <PersonView />
         <Physics>
           <Player />
+          <Cubes />
           <Tree />
         </Physics>
       </Canvas>
