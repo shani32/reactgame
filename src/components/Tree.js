@@ -11,12 +11,20 @@ export const Tree = () => {
   }));
 
   const [addCube] = UseStore((state) => [state.addCube]);
+
   treeTexture.magFilter = NearestFilter;
   treeTexture.wrapS = RepeatWrapping;
   treeTexture.wrapT = RepeatWrapping;
   treeTexture.repeat.set(100, 100);
   return (
-    <mesh ref={ref}>
+    <mesh
+      onClick={(e) => {
+        e.stopPropagation();
+        const [x, y, z] = Object.values(e.point).map((val) => Math.ceil(val));
+        addCube(x, y, z);
+      }}
+      ref={ref}
+    >
       <planeBufferGeometry attach="geometry" args={[100, 100]} />
       <meshStandardMaterial attach="material" map={treeTexture} />
     </mesh>
