@@ -28,7 +28,14 @@ export const UseStore = create((set) => ({
       ],
     }));
   },
-  removeCube: () => {},
+  removeCube: (x, y, z) => {
+    set((prev) => ({
+      cubes: prev.cubes.filter((cube) => {
+        const [X, Y, Z] = cube.pos;
+        return X !== x || Y !== y || Z !== z;
+      }),
+    }));
+  },
   setTexture: () => {},
   saveWorld: () => {},
   resetWorld: () => {},
