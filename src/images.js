@@ -1,7 +1,7 @@
-import wood from "./assets/images/wood.png";
-import tree from "./assets/images/tree.png";
-import stone from "./assets/images/stone.png";
-import ground from "./assets/images/ground.png";
-import groundGrass from "./assets/images/ground-grass.png";
+import woodI from "./assets/images/wood.png";
+import treeI from "./assets/images/tree.png";
+import stoneI from "./assets/images/stone.png";
+import groundI from "./assets/images/ground.png";
+import groundGrassI from "./assets/images/ground-grass.png";
 
-export { wood, tree, stone, ground, groundGrass };
+export { woodI, treeI, stoneI, groundI, groundGrassI };

@@ -1,11 +1,11 @@
 import { NearestFilter, TextureLoader } from "three";
-import { wood, tree, stone, ground, groundGrass } from "./images";
+import { woodI, treeI, stoneI, groundI, groundGrassI } from "./images";
 
-const woodTexture = new TextureLoader().load(wood);
-const treeTexture = new TextureLoader().load(tree);
-const stoneTexture = new TextureLoader().load(stone);
-const groundTexture = new TextureLoader().load(ground);
-const groundGrassTexture = new TextureLoader().load(groundGrass);
+const woodTexture = new TextureLoader().load(woodI);
+const treeTexture = new TextureLoader().load(treeI);
+const stoneTexture = new TextureLoader().load(stoneI);
+const groundTexture = new TextureLoader().load(groundI);
+const groundGrassTexture = new TextureLoader().load(groundGrassI);
 
 woodTexture.magFilter = NearestFilter;
 treeTexture.magFilter = NearestFilter;
