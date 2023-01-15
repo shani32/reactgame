@@ -7,7 +7,7 @@ import { UseStore } from "../UseStore";
 export const Stone = () => {
   const [ref] = usePlane(() => ({
     rotation: [-Math.PI / 2, 0, 0],
-    position: [80, -1, 0],
+    position: [90, -1, 0],
   }));
 
   const [addCube] = UseStore((state) => [state.addCube]);

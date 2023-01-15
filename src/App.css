@@ -1,3 +1,23 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/en_US/games/switch/m/minecraft-switch/hero");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+.app button {
+  width: 6rem;
+  height: 3rem;
+  border-radius: 5px;
+}
+.app button:hover {
+  background-color: rgb(85, 138, 251);
+  color: white;
+  cursor: pointer;
+}
+
 .centered {
   top: 50%;
   left: 50%;

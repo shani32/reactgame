@@ -10,41 +10,19 @@ import { Cubes } from "./components/Cubes";
 import { TextureType } from "./components/TextureType";
 import { World } from "./components/World";
 import { Stone } from "./components/Stone";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Homepage } from "./components/Homepage";
+import { Game } from "./components/Game";
 
 function App() {
-  useEffect(() => {});
   return (
     <>
-      <div className="app"></div>
-      <Canvas>
-        {/* <Sky sunPosition={[100, 100, 20]} /> */}
-        <Sky
-          distance={450000}
-          sunPosition={[0, -1, 0]}
-          inclination={0}
-          azimuth={0.25}
-        />
-        <Stars
-          radius={100}
-          depth={50}
-          count={5000}
-          factor={4}
-          saturation={0}
-          fade
-          speed={1}
-        />
-        <ambientLight intensity={0.5} />
-        <PersonView />
-        <Physics>
-          <Player />
-          <Cubes />
-          <Tree />
-          <Stone />
-        </Physics>
-      </Canvas>
-      <div className="cursor centered absolute">+</div>
-      <TextureType />
-      <World />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/game" element={<Game />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
