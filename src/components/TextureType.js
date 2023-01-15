@@ -19,8 +19,8 @@ export const TextureType = () => {
   const { wood, tree, stone, ground, groundGrass } = UseKeyboard();
 
   useEffect(() => {
-    const types = { wood, tree, stone, ground, groundGrass };
-    const pressedType = Object.entries(types).find(([k, v]) => v);
+    const textures = { wood, tree, stone, ground, groundGrass };
+    const pressedType = Object.entries(textures).find(([k, v]) => v);
     if (pressedType) {
       setTexture(pressedType[0]);
     }
