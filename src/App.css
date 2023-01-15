@@ -10,3 +10,7 @@
 .absolute {
   position: absolute;
 }
+.world {
+  top: 10px;
+  left: 10px;
+}

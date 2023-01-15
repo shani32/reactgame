@@ -8,6 +8,7 @@ import { Player } from "./components/Player";
 import { PersonView } from "./components/PersonView";
 import { Cubes } from "./components/Cubes";
 import { TextureType } from "./components/TextureType";
+import { World } from "./components/World";
 
 function App() {
   useEffect(() => {});
@@ -26,6 +27,7 @@ function App() {
       </Canvas>
       <div className="cursor centered absolute">+</div>
       <TextureType />
+      <World />
     </>
   );
 }
