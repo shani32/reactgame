@@ -18,30 +18,29 @@ export const Cube = ({ position, texture }) => {
     <mesh
       onClick={(e) => {
         e.stopPropagation();
-        const clickedFace = Math.floor(e.faceIndex / 2);
+        const clicked = Math.floor(e.faceIndex / 2);
         const { x, y, z } = ref.current.position;
-        console.log("e");
-        console.log(e);
+
         if (e.altKey) {
           removeCube(x, y, z);
           return;
-        } else if (clickedFace === 0) {
+        } else if (clicked === 0) {
           addCube(x + 1, y, z);
           return;
-        } else if (clickedFace === 1) {
+        } else if (clicked === 1) {
           addCube(x - 1, y, z);
           return;
-        } else if (clickedFace === 2) {
+        } else if (clicked === 2) {
           addCube(x, y + 1, z);
           return;
-        } else if (clickedFace === 3) {
+        } else if (clicked === 3) {
           addCube(1, y - 1, z);
           return;
-        } else if (clickedFace === 4) {
-          addCube(1, y, z + 1);
+        } else if (clicked === 4) {
+          addCube(x, y, z + 1);
           return;
-        } else if (clickedFace === 5) {
-          addCube(x - 1, y, z - 1);
+        } else if (clicked === 5) {
+          addCube(x, y, z - 1);
           return;
         }
       }}
