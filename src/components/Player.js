@@ -21,7 +21,7 @@ export const Player = () => {
   const vel = useRef([0, 0, 0]);
 
   useEffect(() => {
-    api.velocity.subscribe((v) => (vel.current = v));
+    api.velocity.subscribe((val) => (vel.current = val));
   }, [api.velocity]);
 
   const pos = useRef([0, 0, 0]);
@@ -35,19 +35,15 @@ export const Player = () => {
       new Vector3(pos.current[0], pos.current[1], pos.current[2])
     );
     const direction = new Vector3();
-    const frontVector = new Vector3(
+    const front = new Vector3(
       0,
       0,
       (moveBackword ? 1 : 0) - (moveForward ? 1 : 0)
     );
-    const sideVector = new Vector3(
-      (moveLeft ? 1 : 0) - (moveRight ? 1 : 0),
-      0,
-      0
-    );
+    const side = new Vector3((moveLeft ? 1 : 0) - (moveRight ? 1 : 0), 0, 0);
 
     direction
-      .subVectors(frontVector, sideVector)
+      .subVectors(front, side)
       .normalize()
       .multiplyScalar(SPEED)
       .applyEuler(camera.rotation);
