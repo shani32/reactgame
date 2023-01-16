@@ -25,7 +25,7 @@ export const Tree = () => {
       }}
       ref={ref}
     >
-      <planeBufferGeometry attach="geometry" args={[80, 80]} />
+      <planeGeometry attach="geometry" args={[80, 80]} />
       <meshStandardMaterial attach="material" map={treeTexture} />
     </mesh>
   );
