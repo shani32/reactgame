@@ -7,10 +7,10 @@ export const World = () => {
     state.resetWorld,
   ]);
 
-  return (
-    <div className="world absolute">
-      <button onClick={() => savedWorld()}>Save</button>
-      <button onClick={() => resetWorld()}>Reset</button>
-    </div>
-  );
+  //   return (
+  //     <div className="world absolute">
+  //       <button onClick={() => savedWorld()}>Save</button>
+  //       <button onClick={() => resetWorld()}>Reset</button>
+  //     </div>
+  //   );
 };
